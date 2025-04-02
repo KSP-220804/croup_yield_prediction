@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/farmer_signup.css">
+    <title>Document</title>
+</head>
+<body>
+<form method="post" onsubmit="showNotification()">
+    <label for="name">Name</label>
+    <input type="text" name="name" placeholder="Name" required>
+    <label for="email">Email</label>
+    <input type="text" name="email" placeholder="Email" required>
+    <!-- <label for="username">Username</label>
+    <input type="text" name="username" placeholder="Username" required> -->
+    <label for="password">Password</label>
+    <input type="password" name="password" placeholder="Password" required>
+    <label for="phone">Phone</label>
+    <input type="text" name="phone" placeholder="Phone" required>
+    <label for="location">Location</label>
+    <select name="location" required>
+        <option value="">Select Location</option>
+        <option value="Kurnool">Kurnool</option>
+        <option value="Srikakulam">Srikakulam</option>
+        <option value="Vizianagaram">Vizianagaram</option>
+        <option value="Visakhapatnam">Visakhapatnam</option>
+        <option value="East Godavari">East Godavari</option>
+        <option value="West Godavari">West Godavari</option>
+        <option value="Krishna">Krishna</option>
+        <option value="Guntur">Guntur</option>
+        <option value="Prakasam">Prakasam</option>
+        <option value="Nellore">Nellore</option>
+        <option value="Chittoor">Chittoor</option>
+        <option value="Kadapa">Kadapa</option>
+        <option value="Anantapur">Anantapur</option>
+    </select>
+    <input type="submit"  value="Submit">
+</form>
+{% if error %}
+    <div class="alert alert-danger" role="alert">
+        {{ error }}
+    </div>
+{% endif %}
+<script>
+    function showNotification() {
+        alert("Submission successful!");  
+    }
+</script>
+</body>
+</html>
